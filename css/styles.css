@@ -1,5 +1,5 @@
 .body{
-background-color: #135f92;
+background-image: url(../img/fondo4.jpg);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -7,6 +7,6 @@ align-items: center;
 }
 .calculadora{
     font-family: 'Square Peg', cursive;
-    font-size: 4rem;
-    padding-top: 40%;
+    font-size: 5rem;
+    padding-top: 20%;
 }
