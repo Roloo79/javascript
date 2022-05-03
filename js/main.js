@@ -1,7 +1,7 @@
 
 alert ( "Bienvenido a la calculadora de performance para aviones!")
 do{
-let preguntaInicial = prompt (" Por favor seleccione la opcion que quiere realizar: \n 1-Calcular grados de inclinacion en viraje de procedimiento \n 2-Calcular viraje estandar \n 3-Calcular anticipacion a arco DME o radial \n 4-Calculo de error oblicuo DME \n 5-Ver lista de aviones disponibles") 
+let preguntaInicial = prompt (" Por favor seleccione la opcion que quiere realizar: \n 1-Calcular grados de inclinacion en viraje de procedimiento \n 2-Calcular viraje estandar \n 3-Calcular anticipacion a arco DME o radial \n 4-Calculo de error oblicuo DME \n 5-Ver lista de aviones disponibles \n 6-Ver especificaciones tecnicas") 
 
 /* Calculo grados de inclinacion en viraje de procedimiento */
 if (preguntaInicial == "1"){
@@ -36,7 +36,7 @@ else if (preguntaInicial == "5"){
 
     /*array*/
 
-    const aviones = ["Cessna 152" , "Cessna 172" , "Piper Seneca 3"]
+const aviones = ["Cessna 152" , "Cessna 172" , "Piper Seneca 3"]
     alert("La lista de aviones es:\n" + " " + aviones.toString());
     
     let agregarAvion = prompt ("¿Desea agregar otro? si/no");
@@ -46,6 +46,29 @@ else if (preguntaInicial == "5"){
         alert("Su avion fue agregado con exito! La lista quedo asi:\n" + aviones.join(", ")+".");
     }
 }
+/* Buscar aviones */
+
+else if (preguntaInicial == "6"){
+    
+const planes = [
+    {marca:"CESSNA", modelo: "152" , velocidad: 90 , consumo: 19 },
+    {marca:"BEECHCRAFT", modelo: "KING AIR" , velocidad: 250 , consumo: 350 },
+    {marca:"TECNAM", modelo: "P92" , velocidad: 100 , consumo: 14 },
+    {marca:"PIPER", modelo: "SENECA 3" , velocidad: 140 , consumo: 45 },
+]
+let pregBusqueda = prompt ("Ingrese marca de la aeronave que desea consultar").toUpperCase(); 
+const busqueda =  planes.find ((avion) => avion.marca === pregBusqueda);
+console.log(busqueda);
+if (busqueda===undefined){
+    alert("La aeronave no existe en nuestra base de datos!")
+}
+const rapidas = planes.filter ((las) => las.velocidad > 120);
+let preguntaRapidas = prompt ("¿Desea conocer las aeronaves mas rapidas de nuestra base de datos? si/no")
+if (preguntaRapidas == "si"){
+    console.log (rapidas);
+}
+}
+
 else {
     alert ("Los datos ingresados son incorrectos!")
 }
@@ -55,4 +78,5 @@ otros = prompt("¿Desea realizar otra tarea? \n -si \n -no");
 if (otros== "no"){
     alert(" Hasta la proxima!")
 }
+
 
