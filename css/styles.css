@@ -8,5 +8,14 @@ align-items: center;
 .calculadora{
     font-family: 'Square Peg', cursive;
     font-size: 5rem;
-    padding-top: 20%;
+}
+.footer{
+    width: 100% ;
+    margin-top: 60%;
+    background-color: antiquewhite;
+}
+.h3Footer{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Lobster', cursive;
 }
