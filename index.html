@@ -23,14 +23,22 @@
   <hr>
 
   <nav>
-    <button class="btn btn-primary" type="submit">Calculadora aeronautica</button>
-    <button class="btn btn-primary" type="submit">Lista de aeronaves</button>
-    <button class="btn btn-primary" type="submit">Buscar aeronaves</button>
-    <button class="btn btn-primary" type="submit">Agregar aeronaves</button>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Calculadora de performance
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#" id="virajeProcedimiento">Grados de inclinacion en viraje de procedimiento</a></li>
+        <li><a class="dropdown-item" href="#" id="virajeEstandar">Viraje estandar</a></li>
+        <li><a class="dropdown-item" href="#" id="anticipacionArco">Anticipacion arco DME o radial</a></li>
+        <li><a class="dropdown-item" href="#" id="errorOblicuo">Error oblicuo DME</a></li>
+      </ul>
+    <button class="btn btn-primary" id="listaAeronaves" type="submit">Lista de aeronaves</button>
+    <button class="btn btn-primary" type="submit" id="buscarAeronaves">Conversor de unidades</button>
+    <button class="btn btn-primary" type="submit" id="agregarAeronaves">Navegador</button>
     
   </nav>
 
-  <main>
+  <main id="main">
 
   </main>
 
@@ -41,3 +49,7 @@
   <script src="js/main.js" defer></script>
 </body>
 </html>
+
+
+
+
