@@ -29,9 +29,24 @@ botonLista.onclick = () => {
 /* Calculo grados de inclinacion en viraje de procedimiento */
 let virajeProcedimiento = document.getElementById("virajeProcedimiento");
 virajeProcedimiento.onclick = () =>{
-    const grados = (a , b) => { return a / b };
-    alert( grados(36 ,prompt("Ingrese tiempo de alejamiento desde la estacion en minutos.")) + "°");
-    }
+    let form1 = document.createElement("div");
+    form1.innerHTML = `<div>
+    <label for="tiempo">Ingrese tiempo de alejamiento desde la estacion en minutos.</label>
+    <input type="text" id="valor1" name="Name" />
+    <button type="button" class="btn btn-success" onclick="botonCalcular()">Calcular</button>
+   </div>
+   `
+    document.getElementById("main").append(form1);
+    form1.className = "form1";
+}
+const botonCalcular = () =>{
+  let valorCalculo = document.getElementById("valor1").value;
+  let resultado = 36 / valorCalculo ;
+  let respuesta1 = document.createElement(`p`);
+  respuesta1.className = "respuesta1";
+  respuesta1.innerText = "La inclinacion alar será de:" + " " + resultado + "°";
+  document.getElementById("main").append(respuesta1);
+}
 
 /* Calculo de viraje estandar */
 

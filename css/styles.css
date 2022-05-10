@@ -19,3 +19,15 @@ align-items: center;
     justify-content: flex-end;
     font-family: 'Lobster', cursive;
 }
+.form1{
+    margin-top: 10%;
+    font-size: 1.5rem;
+    color: rgb(38, 11, 194);
+    font-weight: bold;
+}
+.respuesta1{
+    background-color: rgb(27, 196, 78);
+    margin-top: 10%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
