@@ -52,9 +52,24 @@ const botonCalcular = () =>{
 
 let virajeEstandar = document.getElementById("virajeEstandar");
 virajeEstandar.onclick = () =>{
-    const virajeEstandar = (b , c) => {return (b/10) + c}
-    alert( virajeEstandar(prompt("Ingrese su TAS en nudos.") , 7) + "°"); 
-    } 
+   let form2 = document.createElement("div");
+   form2.innerHTML = `<div>
+   <label for="tiempo">Ingrese su TAS en nudos.</label>
+   <input type="text" id="valor2" name="Name" />
+   <button type="button" class="btn btn-success" onclick="botonCalcular2()">Calcular</button>
+  </div>
+  `
+  document.getElementById("main").append(form2);
+  form2.className="form1";
+  } 
+  const botonCalcular2 = () =>{
+    let valorCalculo2 = document.getElementById("valor2").value;
+    let resultado2 = (valorCalculo2 / 10) + 7 ;
+    let respuesta2 = document.createElement(`p`);
+    respuesta2.className = "respuesta1";
+    respuesta2.innerText = "La inclinacion alar será de:" + " " + resultado2 + "°";
+    document.getElementById("main").append(respuesta2);
+  }
 
 /* Calculo de anticipacion a arco DME o radial */
 
