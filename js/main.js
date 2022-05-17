@@ -1,7 +1,6 @@
 
-
-let botonLista = document.getElementById("listaAeronaves");
-botonLista.onclick = () => {
+let listaAeronaves = document.getElementById("listaAeronaves");
+listaAeronaves.onclick = () => {
     let listaAviones = document.createElement ("div");
     listaAviones.innerHTML = `<ul class="list-group">
     <li class="list-group-item">
@@ -92,3 +91,116 @@ errorOblicuo.onclick = () =>{
 
  let agregarAeronaves = document.getElementById("agregarAeronaves");
  
+
+
+/* Navegador */
+
+const avionesNavegador = [ 
+  { id: 1 , avion: "Cessna 152" , velocidad: "90" ,  consumo: "21"},
+  { id: 1 , avion: "Piper arrow" , velocidad: "140" ,  consumo: "38"},  
+  { id: 1 , avion: "B200" , velocidad: "320" ,  consumo: "650"}
+];
+
+let navegador = document.getElementById("navegador");
+navegador.onclick = () =>{
+  let crearTabla = document.createElement("div");
+  crearTabla.innerHTML = `<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01">SELECCIONE AERONAVE</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Cessna 152</option>
+    <option value="2">Piper Arrow</option>
+    <option value="3">B200</option>
+  </select>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ORIGEN</th>
+      <th scope="col">DESTINO</th>
+      <th scope="col">HEADING</th>
+      <th scope="col">NIVEL</th>
+      <th scope="col">DISTANCIA</th>
+      <th scope="col">TIEMPO</th>
+      <th scope="col">COMBUSTIBLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><input type="email" class="form-control" id="origen1" placeholder=></td>
+      <td><input type="email" class="form-control" id="destino1" placeholder=></td>
+      <td><input type="email" class="form-control" id="heading1" placeholder=></td>
+      <td><input type="email" class="form-control" id="nivel1" placeholder=></td>
+      <td><input type="email" class="form-control" id="distancia1" placeholder=></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><input type="email" class="form-control" id="origen2" placeholder=></td>
+      <td><input type="email" class="form-control" id="destino2" placeholder=></td>
+      <td><input type="email" class="form-control" id="heading2" placeholder=></td>
+      <td><input type="email" class="form-control" id="nivel2" placeholder=></td>
+      <td><input type="email" class="form-control" id="distancia2" placeholder=></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      <td><input type="email" class="form-control" id="" placeholder=></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td colspan="2">TOTALES</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" onclick="guardar_datos()">Guardar datos </button> `
+document.getElementById("main").append(crearTabla);
+}
+
+
+/*const guardar_datos = () => {
+
+  let guardar_origen1 = document.getElementById("origen1").value;
+  localStorage.setItem('origen1' , guardar_origen1);
+  let guardar_destino1 = document.getElementById("destino1").value;
+  localStorage.setItem('destino1' , guardar_destino1);
+  let guardar_heading1 = document.getElementById("heading1").value;
+  localStorage.setItem('heading1' , guardar_heading1);
+  let guardar_nivel1 = document.getElementById("nivel1").value;
+  localStorage.setItem('nivel1' , guardar_nivel1);
+  let guardar_distancia1 = document.getElementById("distancia1").value;
+  localStorage.setItem('distancia1' , guardar_distancia1);
+
+}
+
+let datos_a_guardar = [ origen1 , destino1 , heading1 , nivel1 , distancia1];
+for (let i of datos_a_guardar){
+  localStorage.setItem()
+}
+*/
+let crearUsuario = document.getElementById("crear_usuario");
+crearUsuario.onclick = () => {
+  let nombre1 = document.getElementById("nombre").value;
+  let apellido1 = document.getElementById("apellido").value;
+  let email = document.getElementById("email").value;
+  let contraseña = document.getElementById("contraseña").value;
+  alert(apellido1 + nombre1 + email + contraseña);
+}
