@@ -31,3 +31,12 @@ align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
 }
+.bodyUsuarios{
+    background-color: rgb(24, 19, 19);
+}
+#div_sesion{
+    background-color: rgb(200, 218, 218);
+}
+.aUsuario{
+    color: black;
+}

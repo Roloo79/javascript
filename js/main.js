@@ -175,32 +175,3 @@ navegador.onclick = () =>{
 document.getElementById("main").append(crearTabla);
 }
 
-
-/*const guardar_datos = () => {
-
-  let guardar_origen1 = document.getElementById("origen1").value;
-  localStorage.setItem('origen1' , guardar_origen1);
-  let guardar_destino1 = document.getElementById("destino1").value;
-  localStorage.setItem('destino1' , guardar_destino1);
-  let guardar_heading1 = document.getElementById("heading1").value;
-  localStorage.setItem('heading1' , guardar_heading1);
-  let guardar_nivel1 = document.getElementById("nivel1").value;
-  localStorage.setItem('nivel1' , guardar_nivel1);
-  let guardar_distancia1 = document.getElementById("distancia1").value;
-  localStorage.setItem('distancia1' , guardar_distancia1);
-
-}
-
-let datos_a_guardar = [ origen1 , destino1 , heading1 , nivel1 , distancia1];
-for (let i of datos_a_guardar){
-  localStorage.setItem()
-}
-*/
-let crearUsuario = document.getElementById("crear_usuario");
-crearUsuario.onclick = () => {
-  let nombre1 = document.getElementById("nombre").value;
-  let apellido1 = document.getElementById("apellido").value;
-  let email = document.getElementById("email").value;
-  let contraseña = document.getElementById("contraseña").value;
-  alert(apellido1 + nombre1 + email + contraseña);
-}
