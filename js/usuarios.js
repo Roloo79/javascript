@@ -9,4 +9,3 @@ crearUsuario.onclick = () => {
   let contraseña = document.getElementById("contraseña").value;
   localStorage.setItem('contraseña' , contraseña);
 }
-
