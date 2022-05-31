@@ -1,26 +1,24 @@
 
 let listaAeronaves = document.getElementById("listaAeronaves");
 listaAeronaves.onclick = () => {
-    let listaAviones = document.createElement ("div");
-    listaAviones.innerHTML = `<ul class="list-group">
-    <li class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      Cessna 152
-    </li>
-    <li class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      Cessna 172
-    </li>
-    <li class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      Piper Arrow
-    </li>
-    <li class="list-group-item">
-      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-      Beechcraft King Air 350
-    </li>
-  </ul>`
-    document.getElementById("main").appendChild(listaAviones);
+  fetch ('./js/aviones.json')
+  .then( (resp) => resp.json() )
+    .then( (data) => {
+      data.forEach((aviones) => {
+        const diver = document.createElement('div')
+        diver.innerHTML = `<div class="div_lista">
+        <div class="card-body diver">
+          <h5 class="card-title">${aviones.Marca}</h5>
+          <p class="card-text">Velocidad: ${aviones.Velocidad} nudos</p>
+          <p class="card-text">Alcance: ${aviones.Velocidad} millas nauticas</p>
+          <p class="card-text">Capacidad para: ${aviones.Capacidad}</p>
+        </div>
+      </div>
+        `
+        document.getElementById("main").append(diver);
+    })
+
+    })
 
 }
 /* Funciones calculadora*/

@@ -40,4 +40,7 @@ align-items: center;
 .aUsuario{
     color: rgb(0, 0, 0);
 }
-
+.diver{
+    background-color: rgb(70, 133, 51);
+    margin-top: 2rem;
+}
