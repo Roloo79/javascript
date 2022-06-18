@@ -19,6 +19,7 @@ if ((usuarioNuevo == usuario) && (claveNueva==clave)){
         showConfirmButton: false
       })
 }
+
 else{
     Swal.fire({
         title: 'Los datos ingresados son incorrectos!',

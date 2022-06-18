@@ -1,9 +1,9 @@
 
 [
-    {"Marca": "Cessna 152" , "Velocidad": 90 , "Capacidad": "2 pasajeros"},
-    {"Marca": "Cessna 172" , "Velocidad": 90 , "Capacidad": "4 pasajeros"},
-    {"Marca": "Piper Arrow" , "Velocidad": 130 , "Capacidad": "4 pasajeros"},
-    {"Marca": "Piper Seneca II" , "Velocidad": 140 , "Capacidad": "6 pasajeros"},
-    {"Marca": "King Air B200" , "Velocidad": 250 , "Capacidad": "8 pasajeros"}
+    {"Marca": "Cessna 152" , "Velocidad": 90 , "Capacidad": "2 pasajeros", "Alcance":"400"},
+    {"Marca": "Cessna 172" , "Velocidad": 90 , "Capacidad": "4 pasajeros", "Alcance":"380"},
+    {"Marca": "Piper Arrow" , "Velocidad": 130 , "Capacidad": "4 pasajeros", "Alcance":"700"},
+    {"Marca": "Piper Seneca II" , "Velocidad": 140 , "Capacidad": "6 pasajeros", "Alcance":"650"},
+    {"Marca": "King Air B200" , "Velocidad": 250 , "Capacidad": "8 pasajeros", "Alcance":"1500"}
 
 ]
